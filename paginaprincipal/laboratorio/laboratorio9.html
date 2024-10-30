@@ -1,0 +1,68 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Uso de Laboratorios</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js" defer></script>
+</head>
+<body class="bg-blue-900 font-roboto">
+    <div class="container mx-auto bg-white p-8 mt-12 rounded-lg shadow-lg">
+        <h1 class="text-center text-blue-900 text-3xl font-bold mb-6">Formulario de Uso de Laboratorios</h1>
+        <h2 class="text-center text-blue-900 text-2xl font-semibold mb-4">Laboratorio 9</h2>
+        <table class="w-full border-collapse mb-6">
+            <tr>
+                <th class="border-2 border-blue-900 bg-blue-100 text-blue-900 p-2 rounded">Equipos de Cómputo</th>
+                <td class="border-2 border-blue-900 p-2 rounded">31</td>
+            </tr>
+            <tr>
+                <th class="border-2 border-blue-900 bg-blue-100 text-blue-900 p-2 rounded">Capacidad para Personas</th>
+                <td class="border-2 border-blue-900 p-2 rounded">50</td>
+            </tr>
+        </table>
+        <form onsubmit="handleSubmit(event)">
+            <label for="turno" class="block text-blue-900 font-bold mb-2">Turno</label>
+            <select id="turno" name="turno" class="block w-full mb-4 p-2 border-2 border-blue-900 rounded">
+                <option value="mañana">Mañana</option>
+                <option value="medio_dia">Medio Día</option>
+                <option value="tarde">Tarde</option>
+                <option value="noche">Noche</option>
+            </select>
+
+            <label for="nombre_docente" class="block text-blue-900 font-bold mb-2">Nombre del Docente</label>
+            <input type="text" id="nombre_docente" name="nombre_docente" required class="block w-full mb-4 p-2 border-2 border-blue-900 rounded">
+
+            <label for="apellido_docente" class="block text-blue-900 font-bold mb-2">Apellido del Docente</label>
+            <input type="text" id="apellido_docente" name="apellido_docente" required class="block w-full mb-4 p-2 border-2 border-blue-900 rounded">
+
+            <label for="correo_docente" class="block text-blue-900 font-bold mb-2">Correo Electrónico</label>
+            <input type="email" id="correo_docente" name="correo_docente" required class="block w-full mb-4 p-2 border-2 border-blue-900 rounded">
+
+            <label for="contrasena_docente" class="block text-blue-900 font-bold mb-2">Contraseña</label>
+            <input type="password" id="contrasena_docente" name="contrasena_docente" required class="block w-full mb-4 p-2 border-2 border-blue-900 rounded">
+
+            <label for="materia" class="block text-blue-900 font-bold mb-2">Materia</label>
+            <input type="text" id="materia" name="materia" required class="block w-full mb-4 p-2 border-2 border-blue-900 rounded">
+
+            <label for="cantidad_estudiantes" class="block text-blue-900 font-bold mb-2">Cantidad de Estudiantes</label>
+            <input type="number" id="cantidad_estudiantes" name="cantidad_estudiantes" required class="block w-full mb-4 p-2 border-2 border-blue-900 rounded">
+
+            <label for="auxiliar_asignado" class="block text-blue-900 font-bold mb-2">Auxiliar Asignado</label>
+            <select id="auxiliar_asignado" name="auxiliar_asignado" class="block w-full mb-4 p-2 border-2 border-blue-900 rounded">
+                <option value="gabriel_torrico">Gabriel Torrico</option>
+                <option value="hugo_israel">Hugo Israel</option>
+            </select>
+
+            <div class="flex justify-between">
+                <button type="button" onclick="history.back()" class="bg-blue-900 text-white p-2 rounded hover:bg-blue-700">Volver</button>
+                <button type="submit" class="bg-blue-900 text-white p-2 rounded hover:bg-blue-700">Enviar</button>
+            </div>
+        </form>
+        <div id="message" class="hidden fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-blue-900 text-white p-4 rounded font-bold z-50">Laboratorio Reservado</div>
+    </div>
+
+    </script>
+</body>
+</html>

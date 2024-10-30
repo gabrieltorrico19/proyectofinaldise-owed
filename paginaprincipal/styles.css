@@ -1,0 +1,204 @@
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            height: 100vh;
+            background-color: #f0f8ff;
+        }
+
+        .sidebar {
+            width: 60px;
+            background-color: #1e3a8a;
+            color: white;
+            transition: width 0.3s;
+            overflow: hidden;
+        }
+
+        .sidebar.expanded {
+            width: 250px;
+        }
+
+        .sidebar .toggle-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50px;
+            cursor: pointer;
+        }
+
+        .sidebar .toggle-btn i {
+            font-size: 24px;
+        }
+        .sidebar .toggle-btn.active i {
+            transform: rotate(0deg); /* Mantiene el icono estático */
+        }
+
+        .sidebar .menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidebar .menu li {
+            padding: 15px 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+
+        .sidebar .menu li:hover {
+            background-color: #215bb9;
+        }
+
+        .sidebar .menu li i {
+            margin-right: 10px;
+        }
+
+        .sidebar .menu li span {
+            display: none;
+        }
+
+        .sidebar.expanded .menu li span {
+            display: inline;
+        }
+        .user-menu {
+            position: relative;
+            padding: 15px 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+
+        .user-menu i {
+            font-size: 24px;
+        }
+
+        .user-options {
+            display: none;
+            position: absolute;
+            bottom: 60px;
+            left: 0;
+            background-color: #1e3a8a;
+            width: 100%;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            border-top: 1px solid #215bb9;
+        }
+
+        .user-options li {
+            padding: 15px 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+
+        .user-options li:hover {
+            background-color: #215bb9;
+        }
+
+        .user-options li i {
+            margin-right: 10px;
+        }
+
+        .content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            background-color: #1e3b8ade;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            font-size: 50px;
+            font-weight: bold;
+            height: 25%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .main-content {
+            position: relative;
+            padding: 20px;
+            height: 75%;
+            background-color: rgba(255, 255, 255, 0.8);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .frame-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            width: 100%;
+        }
+
+        .frame {
+            height: 250px;
+            background-color: #ffffff;
+            border: 2px solid #1e3a8a;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        .frame-title {
+            font-weight: bold;
+            font-size: 22px;
+        }
+
+        .frame-subtitle {
+            font-weight: bold;
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        .turnos {
+            margin-top: 10px;
+        }
+
+        .turnos div {
+            margin: 5px 0;
+        }
+
+        .turnos span {
+            color: green;
+            font-weight: bold;
+        }
+
+        .frame:hover {
+            transform: scale(1.05);
+        }
+
+        .main-content::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 150%;
+            height: 150%;
+            background-image: url('/paginaprincipal/logo/fondo.png');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.3;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+
+        .main-content > * {
+            position: relative;
+            z-index: 2;
+        }

@@ -1,0 +1,95 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #1e3a8a; /* Fondo azul oscuro */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+    border-radius: 15px; /* Bordes más redondeados */
+}
+
+h1 {
+    text-align: center;
+    color: #1e3a8a; /* Color azul oscuro */
+}
+
+h2 {
+    text-align: center;
+    color: #1e3a8a; /* Color azul oscuro */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table, th, td {
+    border: 2px solid #1e3a8a; /* Borde azul */
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #e0f2fe; /* Azul claro */
+    color: #1e3a8a; /* Color azul oscuro */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #1e3a8a; /* Color azul oscuro */
+}
+
+input, select {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 2px solid #1e3a8a; /* Borde azul */
+    border-radius: 8px; /* Bordes más redondeados */
+}
+
+button {
+    padding: 10px;
+    background-color: #1e3a8a; /* Azul oscuro */
+    color: #ffffff;
+    border: none;
+    border-radius: 8px; /* Bordes más redondeados */
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0d3a6d; /* Azul más oscuro */
+}
+.button-container {
+    display: flex;
+    justify-content: space-between;
+}
+.message {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #1e3a8a; /* Azul oscuro */
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 8px; /* Bordes más redondeados */
+    font-weight: bold;
+    z-index: 1000;
+}

@@ -1,0 +1,66 @@
+body {
+    font-family: 'Roboto', sans-serif; /* Establece la fuente principal */
+    background-color: #f0f8ff; /* Fondo claro */
+    display: flex; /* Usa flexbox para centrar el contenido */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 100vh; /* Altura completa de la ventana */
+    margin: 0; /* Elimina el margen por defecto */
+}
+
+.login-container {
+    background-color: white; /* Fondo blanco para el contenedor */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    text-align: center; /* Centra el texto dentro del contenedor */
+    width: 300px; /* Ancho del contenedor */
+}
+
+h1 {
+    color: #1e90ff; /* Azul brillante */
+    margin: 0; /* Elimina el margen superior e inferior */
+}
+
+h2 {
+    color: #4682b4; /* Azul medio */
+    margin: 10px 0; /* Margen vertical */
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    padding: 10px; /* Espaciado interno */
+    margin: 10px 0; /* Margen vertical */
+    border: 2px solid #1e90ff; /* Borde azul */
+    border-radius: 8px; /* Bordes redondeados para los inputs */
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #4682b4; /* Cambia el color del borde al enfocar */
+    outline: none; /* Sin contorno al enfocar */
+}
+
+button {
+    background-color: #1e90ff; /* Fondo azul para el botón */
+    color: white; /* Texto blanco */
+    padding: 10px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 8px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    font-size: 16px; /* Tamaño de fuente */
+    margin-top: 10px; /* Margen superior */
+}
+
+button:hover {
+    background-color: #4682b4; /* Cambia el color de fondo al pasar el mouse */
+}
+
+.footer {
+    margin-top: 20px; /* Margen superior */
+    color: #555; /* Color gris para el texto del pie de página */
+    font-size: 14px; /* Tamaño de fuente del pie de página */
+}
